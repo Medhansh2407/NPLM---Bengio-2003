@@ -1,0 +1,7 @@
+input.txt
+.ipynb_checkpoints/
+__pycache__/
+*.pt
+*.pth
+*.pyc
+.DS_Store
