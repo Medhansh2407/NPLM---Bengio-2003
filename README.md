@@ -2,7 +2,7 @@
 
 A from-scratch PyTorch implementation of the **Neural Probabilistic Language Model** (Bengio et al., 2003) trained on the Tiny Shakespeare dataset.
 
-> Full paper walkthrough and implementation blog post: **[coming soon]**
+> Full paper walkthrough and implementation blog post: https://medhanshnarang.vercel.app/papers/a-neural-probabilistic-language-model-bengio-et-al-2003
 
 ---
 
@@ -45,6 +45,7 @@ Download [Tiny Shakespeare](https://raw.githubusercontent.com/karpathy/char-rnn/
 **Dependencies:** `torch`, `matplotlib`
 
 Run all cells top to bottom.
+
 
 ---
 
