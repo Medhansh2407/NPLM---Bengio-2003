@@ -1,6 +1,9 @@
 # NPLM — Bengio et al. (2003) | From-Scratch PyTorch Implementation
 
-A from-scratch PyTorch implementation of the **Neural Probabilistic Language Model** (Bengio et al., 2003) trained on the Tiny Shakespeare dataset.
+
+This is a grounds up implementation of the ***Neural Probabilistic Language Model*** introduced 
+in the paper(Bengio et al. , 2003) . The model is trained on the Tiny Shakespeare dataset.
+
 
 > Full paper walkthrough and implementation blog post: https://medhanshnarang.vercel.app/papers/a-neural-probabilistic-language-model-bengio-et-al-2003
 
@@ -8,13 +11,24 @@ A from-scratch PyTorch implementation of the **Neural Probabilistic Language Mod
 
 ## Why this paper?
 
-Bengio et al. (2003) was a landmark. At a time when language models were n-gram based, this paper introduced **dense word embeddings** — representing words as continuous vectors in a shared feature space. That idea quietly became the foundation of modern NLP (Word2Vec, GloVe, transformers).
+So this paper was an innovative  breakthrough of its time , it changed the the trajectory of 
+language models from n-gram models to *dense word embeddings* , which represents words as 
+continuous feature vectors and so this idea became the foundation of the later papers like Word2Vec , GloVe and transformers.
 
-It solved three core problems with n-gram models:
 
-- **Curse of dimensionality** — n-gram models explode in size as context grows. Trigrams over a 27-character vocab give 729 combinations; scale to words and it's completely intractable.
-- **No notion of word similarity** — n-gram models treat every word as an independent symbol with no relationship to any other.
-- **Zero probability for unseen sequences** — if a sequence wasn't in training data, probability is 0. Smoothing was a patch, not a fix.
+So the three core n-gram problems which this model solved were:
+
+- **Curse of dimensionality** — n-gram models explode exponentially in size as the context grows , for example a bigram model which has the vocabulary of 27 characters of which the 26 characters are the English alphabets and one character is the special ending token . Now if we
+we use a bigram model to perform this job , we would have one of the 27 characters as a context
+character and would have to predict one of the 27 characters , which would mean dealing with
+27C1 * 27C1 characters = 729 characters
+now scale this up to trigrams and you would have to select one combination of 2 characters from 
+729 possible combinations and then would have to select one of the 27 characters as the next character , well this was curse of dimensionality for you.
+- **No notion of word similarity** —n-gram models only evaluate on the order of words meanwhile 
+there is way more information in word sequence than just the word order , and so the NPLM was successful in working through those information by representing words through some n dimensional feature vector.
+- **Zero probability for unseen sequences** — In the n gram models , an unseen sequence was 
+assigned a 0 probability and so a fix for this was a mathematical manipulation and not the model 
+actually learning through the patters and so smoothing was a patch not a fix to this problem.
 
 The NPLM addresses all three through a learned embedding space and a neural network probability model.
 
