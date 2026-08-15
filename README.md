@@ -1,7 +1,7 @@
 # NPLM — Bengio et al. (2003) | From-Scratch PyTorch Implementation
 
 
-This is a grounds up implementation of the ***Neural Probabilistic Language Model*** introduced 
+This is a simplified from scratch implementation of the ***Neural Probabilistic Language Model*** introduced 
 in the paper(Bengio et al. , 2003) . The model is trained on the Tiny Shakespeare dataset.
 
 
